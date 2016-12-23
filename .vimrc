@@ -31,6 +31,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Raimondi/delimitMate'
+Plugin 'suan/vim-instant-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,9 +85,9 @@ highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%121v.\+/
 highlight ExtraWhitespace ctermbg=darkgrey guibg=darkgrey
 match ExtraWhitespace /\s\+$/
+highlight Folded ctermbg=darkgrey guibg=darkgrey
 
 set backspace=indent,eol,start
-set list lcs=tab:\|\
 
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
@@ -131,6 +132,11 @@ set autoindent
 set pastetoggle=<f5>
 set hidden
 set mouse=a
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+let g:jsx_ext_required = 0
 
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
